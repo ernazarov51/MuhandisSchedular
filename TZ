@@ -1,0 +1,185 @@
+salom men Muhandislik maktabi uchun bir kichik admin panel qilmoqchiman
+
+Bu admin panelga telegramdagi inline keyboard tugmani bosihs orqali yonaltiriladi.
+Panelda dars jadvali qoshiladi
+
+asosiy page ga kelganda ikkita tugma chiqishi kerak. Biri - dars jadvali qo'shish.
+ikkinchisi-yangi komponent (nomini shunchaki komponent deb yozib qoydim aslida nima bolishini bilmayman, oqituvchi,room,group,sciense qoshiladigan tugma nomini umumiy qilib qoydim, ozing mosiga almashtir).
+
+komponent bosilganda yana tugmalar chiqishi kerak(oqituvchi qoshish, fan,room,group..)
+oqituvchi qoshishni bosganda oqituvchining first_name, lastname sini soraydigan forma va submit chiqishi kerak va barcha oqituvchilar va ular otadigan fan ham korinib turishi kerak
+
+submit tugmasi bosilganda men bergan ngrok domen va url ga POST request jonatish kerak
+
+dars jadvali qoshish deganini bosganda start time end time science (selection boladi), room(bu ham selection boladi
+teacher(selection), group(selection)
+
+
+dizayn zamonaviy va chiroyli korinishda bolsin
+
+va submut bosilganda men bergan ngrok domen va url ga POST request jonatish kerak
+
+dizayn ni OKMK(Olmaliq kon mentallurgiya kombinati) ga moslab qil. okmk ni logotiplari ni bazi detallarga ishlat icon va hk
+
+men senga beckend bilan almashinadigan ma'lumotlar qanday bolishi ni tushuntiraman.( endpoint qanday boladi qanday korinishdagi json malumotlar keladi va hk.)
+
+1) GET api/v1/groups/
+[
+  {
+    "id": 1,
+    "name": "A-513"
+  }
+]
+    POST api/v1/groups
+ {
+  "name": "string"
+}
+
+2)
+ GET api/v1/sciences/
+[
+  {
+    "id": 1,
+    "name": "Ona tili"
+  }
+]
+POST api/v1/sciences/
+{
+  "name": "string"
+}
+3)
+GET api/v1/rooms/
+[
+  {
+    "id": 0,
+    "name": "string"
+  }
+]
+POST api/v1/rooms/
+{
+  "name": "string"
+}
+response status code 201: {
+  "id": 0,
+  "name": "string"
+}
+4)
+GET api/v1/teachers/
+[
+  {
+    "id": 0,
+    "first_name": "string",
+    "last_name": "string"
+  }
+]
+
+POST api/v1/teachers/
+{
+  "first_name": "string",
+  "last_name": "string"
+}
+response 201:
+{
+  "first_name": "string",
+  "last_name": "string"
+}
+5) GET api/v1/lesson/
+[
+  {
+    "id": 0,
+    "start": "2025-07-20",
+    "end": "2025-07-20",
+    "science": 0,
+    "room": 0,
+    "teacher": 0,
+    "group": 0
+  }
+]
+POST api/v1/lesson/
+{
+  "start": "2025-07-20",
+  "end": "2025-07-20",
+  "science": 0,
+  "room": 0,
+  "teacher": 0,
+  "group": 0
+}
+
+
+response
+201
+{
+  "id": 0,
+  "start": "2025-07-20",
+  "end": "2025-07-20",
+  "science": 0,
+  "room": 0,
+  "teacher": 0,
+  "group": 0
+}
+
+
+POST dan muammo deyarli yoq qoshilganidan keyin message chiqmayapti holos shuni tog'rila
+
+bundan tashqari serverdan malumotlarni yuklay olmayapti
+menimcha sen get sorovi yuborganda qanday response kelishini bilmayapsan
+hozir men senga malumotlar va endpoindlarni yana bir bor tushuntiraman faqat get uchun
+
+GET /api/v1/groups
+
+Code
+200
+Response body
+
+[
+  {
+    "id": 1,
+    "name": "A-513"
+  }
+]
+
+GET /api/v1/lessons
+status code 200
+Response body
+[
+  {
+    "id": 0,
+    "start": "2025-07-20",
+    "end": "2025-07-20",
+    "science": 0,
+    "room": 0,
+    "teacher": 0,
+    "group": 0
+  }
+]
+
+GET /api/v1/rooms
+status code 200
+response body
+[
+  {
+    "id": 0,
+    "name": "string"
+  }
+]
+
+GET /api/v1/sciences
+status code 200
+response body
+[
+  {
+    "id": 1,
+    "name": "Ona tili"
+  }
+]
+
+GET /api/v1/teachers
+status code 200
+response body
+[
+  {
+    "id": 0,
+    "first_name": "string",
+    "last_name": "string"
+  }
+]
