@@ -36,8 +36,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'okmkapi',
-    'drf_spectacular',
     'corsheaders',
+    'drf_spectacular',
 ]
 
 MIDDLEWARE = [
@@ -123,6 +123,6 @@ REST_FRAMEWORK = {
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
 }
 CORS_ALLOWED_ORIGINS = [
-        "http://localhost:3000",  # Example for a React frontend
-        "https://preview-okmk-admin-panel-kzmkc2lytg8ckexa9t80.vusercontent.net",
-    ]
+    "https://preview-okmk-admin-panel-kzmgu0rat2oxiju2a2jl.vusercontent.net",
+]
+CORS_ALLOW_ALL_ORIGINS = True
