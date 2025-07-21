@@ -23,8 +23,8 @@ class Room(models.Model):
 
 
 class Lesson(models.Model):
-    start = models.DateField()
-    end = models.DateField()
+    start = models.DateTimeField()
+    end = models.DateTimeField()
     science = models.ForeignKey(Science, on_delete=models.CASCADE, related_name='lessons')
     room = models.ForeignKey(Room, on_delete=models.CASCADE, related_name='lessons')
     teacher = models.ForeignKey(Teacher, on_delete=models.CASCADE, related_name='lessons')
