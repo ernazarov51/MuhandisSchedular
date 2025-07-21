@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-k56gkbs--)2ud=n$p)8@$z=)#%1o0ez@=3ate%a$h*$^90ki8$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -121,8 +121,10 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 REST_FRAMEWORK = {
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+    'DATETIME_FORMAT': "%Y-%m-%d %H:%M:%S",
+
 }
 CORS_ALLOWED_ORIGINS = [
-    "https://preview-okmk-admin-panel-kzmgu0rat2oxiju2a2jl.vusercontent.net",
+    "https://preview-okmk-admin-panel-kzmo9o8rv97y7y1okinc.vusercontent.net",
 ]
 CORS_ALLOW_ALL_ORIGINS = True

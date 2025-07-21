@@ -38,6 +38,12 @@ class LessonModelSerializer(ModelSerializer):
         model = Lesson
         fields = "__all__"
 
-        depth=1
 
+from rest_framework.serializers import ModelSerializer
+
+class LessonSerializerDepthOne(ModelSerializer):
+    class Meta:
+        model = Lesson
+        fields = ['id', 'start', 'end', 'science', 'room', 'teacher', 'group']
+        depth = 1
 

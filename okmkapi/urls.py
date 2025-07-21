@@ -9,4 +9,5 @@ urlpatterns = [
     path('rooms', views.RoomListAPIView.as_view(), name='rooms'),
     path('teachers', views.TeacherCreateListAPIView.as_view(), name='teachers'),
     path('lesson',  views.LessonCreateAPIView.as_view(), name='lessons'),
+    path('lesson-depth-one/<int:group_id>',  views.LessonListAPIView.as_view(), name='lessons'),
 ]
