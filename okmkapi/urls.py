@@ -8,5 +8,5 @@ urlpatterns = [
     path('sciences', ScienceListAPIView.as_view(), name='sciences'),
     path('rooms', views.RoomListAPIView.as_view(), name='rooms'),
     path('teachers', views.TeacherCreateListAPIView.as_view(), name='teachers'),
-    path('lessons', views.LessonCreateAPIView.as_view(), name='lessons'),
+    path('lesson', views.LessonCreateAPIView.as_view(), name='lessons'),
 ]
