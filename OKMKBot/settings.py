@@ -125,6 +125,6 @@ REST_FRAMEWORK = {
 
 }
 CORS_ALLOWED_ORIGINS = [
-    "https://preview-okmk-admin-panel-kzmgytoekr8zpwpalykr.vusercontent.net",
+    "https://preview-okmk-admin-panel-kzmoki68j1ou9fyt08yg.vusercontent.net",
 ]
 CORS_ALLOW_ALL_ORIGINS = True
