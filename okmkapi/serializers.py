@@ -38,4 +38,6 @@ class LessonModelSerializer(ModelSerializer):
         model = Lesson
         fields = "__all__"
 
+        depth=1
+
 
