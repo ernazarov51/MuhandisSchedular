@@ -47,3 +47,4 @@ class LessonSerializerDepthOne(ModelSerializer):
         fields = ['id', 'start', 'end', 'science', 'room', 'teacher', 'group']
         depth = 1
 
+
