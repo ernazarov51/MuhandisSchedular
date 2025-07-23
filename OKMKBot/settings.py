@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 
 from pathlib import Path
 
+from corsheaders.defaults import default_headers
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -124,7 +126,12 @@ REST_FRAMEWORK = {
     'DATETIME_FORMAT': "%Y-%m-%d %H:%M:%S",
 
 }
-CORS_ALLOWED_ORIGINS = [
-    "https://preview-okmk-admin-panel-kzmoki68j1ou9fyt08yg.vusercontent.net",
+# settings.py
+
+
+CORS_ALLOW_ALL_ORIGINS = True  # yoki CORS_ALLOWED_ORIGINS dan birini tanlang
+
+CORS_ALLOW_HEADERS = list(default_headers) + [
+    'ngrok-skip-browser-warning',
 ]
-CORS_ALLOW_ALL_ORIGINS = True
+
